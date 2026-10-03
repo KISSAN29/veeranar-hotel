@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Veeranar Hotel - Menu</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+
+    <!-- =====================================================
+         NAVBAR
+    ====================================================== -->
+
+    <header>
+
+        <nav class="navbar">
+
+
+            <!-- HOTEL LOGO -->
+
+            <a href="index.html" class="hotel-logo">
+
+                <span>
+                    VEERANAR
+                </span>
+
+                <small>
+                    AUTHENTIC SOUTH INDIAN CUISINE
+                </small>
+
+            </a>
+
+
+
+            <!-- CENTER MENU -->
+
+            <ul class="nav-center">
+
+                <li>
+                    <a href="index.html">
+                        Home
+                    </a>
+                </li>
+
+                <li>
+                    <a href="menu.html">
+                        Menu
+                    </a>
+                </li>
+
+            </ul>
+
+
+
+            <!-- RIGHT MENU -->
+
+            <ul class="nav-right">
+
+                <li>
+                    <a href="about.html">
+                        About
+                    </a>
+                </li>
+
+                <li>
+                    <a href="contact.html">
+                        Contact
+                    </a>
+                </li>
+
+            </ul>
+
+        </nav>
+
+    </header>
+
+
+
+    <!-- =====================================================
+         MENU PAGE
+    ====================================================== -->
+
+    <main class="menu-page">
+
+
+        <!-- MENU HEADING -->
+
+        <div class="menu-heading">
+
+            <p class="menu-small-title">
+                ✦ OUR SPECIAL MENU ✦
+            </p>
+
+            <h1>
+                Our Delicious Food
+            </h1>
+
+            <p>
+                Authentic South Indian flavours,
+                freshly prepared with love.
+            </p>
+
+        </div>
+
+
+
+        <!-- =================================================
+             FOOD CARDS
+        ================================================== -->
+
+        <div class="menu-container">
+
+
+            <!-- ================= BIRIYANI ================= -->
+
+            <div class="food-card">
+
+                <div class="food-image">
+
+                    <img
+                        src="image.biriyani.jpg"
+                        alt="Chicken Biriyani"
+                    >
+
+                </div>
+
+
+                <div class="food-details">
+
+                    <div class="food-title">
+
+                        <h3>
+                            Chicken Biriyani
+                        </h3>
+
+                        <span>
+                            ₹150
+                        </span>
+
+                    </div>
+
+
+                    <p>
+                        Authentic South Indian style
+                        biriyani with rich spices
+                        and tender chicken.
+                    </p>
+
+
+                    <button
+                        class="order-btn"
+                        onclick="orderOnWhatsApp('Chicken Biriyani', 150)"
+                    >
+                        Order Now
+                    </button>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- ================= PAROTTA ================= -->
+
+            <div class="food-card">
+
+                <div class="food-image">
+
+                    <img
+                        src="parrato.jpg"
+                        alt="Madurai Parotta"
+                    >
+
+                </div>
+
+
+                <div class="food-details">
+
+                    <div class="food-title">
+
+                        <h3>
+                            Madurai Parotta
+                        </h3>
+
+                        <span>
+                            ₹20
+                        </span>
+
+                    </div>
+
+
+                    <p>
+                        Soft and flaky Madurai style
+                        parotta served hot and fresh.
+                    </p>
+
+
+                    <button
+                        class="order-btn"
+                        onclick="orderOnWhatsApp('Madurai Parotta', 20)"
+                    >
+                        Order Now
+                    </button>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- ================= DOSAI ================= -->
+
+            <div class="food-card">
+
+                <div class="food-image">
+
+                    <img
+                        src="dosai.jpg"
+                        alt="Crispy Dosai"
+                    >
+
+                </div>
+
+
+                <div class="food-details">
+
+                    <div class="food-title">
+
+                        <h3>
+                            Crispy Dosai
+                        </h3>
+
+                        <span>
+                            ₹40
+                        </span>
+
+                    </div>
+
+
+                    <p>
+                        Crispy golden dosai served
+                        with delicious chutney
+                        and sambar.
+                    </p>
+
+
+                    <button
+                        class="order-btn"
+                        onclick="orderOnWhatsApp('Crispy Dosai', 40)"
+                    >
+                        Order Now
+                    </button>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- ================= CHICKEN 65 ================= -->
+
+            <div class="food-card">
+
+                <div class="food-image">
+
+                    <img
+                        src="chicken65.jpg"
+                        alt="Chicken 65"
+                    >
+
+                </div>
+
+
+                <div class="food-details">
+
+                    <div class="food-title">
+
+                        <h3>
+                            Chicken 65
+                        </h3>
+
+                        <span>
+                            ₹120
+                        </span>
+
+                    </div>
+
+
+                    <p>
+                        Crispy, spicy and juicy chicken
+                        prepared with our special masala.
+                    </p>
+
+
+                    <button
+                        class="order-btn"
+                        onclick="orderOnWhatsApp('Chicken 65', 120)"
+                    >
+                        Order Now
+                    </button>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- ================= CHICKEN GRAVY ================= -->
+
+            <div class="food-card">
+
+                <div class="food-image">
+
+                    <img
+                        src="chickengravy.jpg"
+                        alt="Chicken Gravy"
+                    >
+
+                </div>
+
+
+                <div class="food-details">
+
+                    <div class="food-title">
+
+                        <h3>
+                            Chicken Gravy
+                        </h3>
+
+                        <span>
+                            ₹130
+                        </span>
+
+                    </div>
+
+
+                    <p>
+                        Traditional South Indian chicken
+                        gravy with aromatic spices.
+                    </p>
+
+
+                    <button
+                        class="order-btn"
+                        onclick="orderOnWhatsApp('Chicken Gravy', 130)"
+                    >
+                        Order Now
+                    </button>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- ================= IDLI ================= -->
+
+            <div class="food-card">
+
+                <div class="food-image">
+
+                    <img
+                        src="idly.jpg"
+                        alt="Soft Idli"
+                    >
+
+                </div>
+
+
+                <div class="food-details">
+
+                    <div class="food-title">
+
+                        <h3>
+                            Soft Idli
+                        </h3>
+
+                        <span>
+                            ₹30
+                        </span>
+
+                    </div>
+
+
+                    <p>
+                        Soft and fluffy idlis served
+                        with fresh chutney and sambar.
+                    </p>
+
+
+                    <button
+                        class="order-btn"
+                        onclick="orderOnWhatsApp('Soft Idli', 30)"
+                    >
+                        Order Now
+                    </button>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </main>
+
+
+
+    <!-- =====================================================
+         FOOTER
+    ====================================================== -->
+
+    <footer>
+
+        <p>
+            © 2026 Veeranar Hotel.
+            All Rights Reserved.
+        </p>
+
+    </footer>
+
+
+
+    <!-- JAVASCRIPT -->
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

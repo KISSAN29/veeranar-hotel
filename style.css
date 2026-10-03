@@ -1,0 +1,1607 @@
+/* =========================================================
+   VEERANAR HOTEL
+   PREMIUM SOUTH INDIAN RESTAURANT WEBSITE
+========================================================= */
+
+
+/* =========================================================
+   1. RESET
+========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+
+    background: #fffaf0;
+
+    color: #3b1f14;
+
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+}
+
+button,
+a {
+    -webkit-tap-highlight-color: transparent;
+}
+
+
+/* =========================================================
+   2. NAVBAR
+========================================================= */
+
+/* =========================================================
+   PREMIUM NAVBAR
+========================================================= */
+
+.navbar {
+    width: 100%;
+    min-height: 95px;
+
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+
+    padding: 0 60px;
+
+    background: #fffdf7;
+
+    border-bottom: 1px solid #d6b45c;
+
+    position: relative;
+    z-index: 100;
+
+    box-shadow: 0 5px 25px rgba(60, 40, 15, 0.10);
+}
+
+
+/* =========================
+   HOTEL LOGO
+========================= */
+
+.hotel-logo {
+    width: fit-content;
+
+    display: flex;
+    flex-direction: column;
+
+    position: relative;
+
+    transition: 0.3s ease;
+}
+
+.hotel-logo:hover {
+    transform: translateY(-2px);
+}
+
+.hotel-logo span {
+    font-family: Georgia, "Times New Roman", serif;
+
+    color: #08765b;
+
+    font-size: 32px;
+    font-weight: bold;
+
+    letter-spacing: 5px;
+    line-height: 1;
+}
+
+.hotel-logo small {
+    margin-top: 8px;
+
+    color: #b18427;
+
+    font-size: 9px;
+    font-weight: bold;
+
+    letter-spacing: 2px;
+}
+
+
+/* =========================
+   CENTER MENU
+========================= */
+
+.nav-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 45px;
+
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-center li {
+    position: relative;
+}
+
+.nav-center a {
+    display: inline-block;
+
+    color: #3b1f14;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 17px;
+    font-weight: bold;
+
+    padding: 10px 3px;
+
+    transition: 0.3s ease;
+}
+
+.nav-center a:hover {
+    color: #08765b;
+}
+
+
+/* Gold underline */
+
+.nav-center a::after {
+    content: "";
+
+    position: absolute;
+
+    left: 50%;
+    bottom: 0;
+
+    width: 0;
+    height: 2px;
+
+    background: #c6952e;
+
+    transform: translateX(-50%);
+
+    transition: 0.3s ease;
+}
+
+.nav-center a:hover::after {
+    width: 100%;
+}
+
+
+/* =========================
+   RIGHT MENU
+========================= */
+
+.nav-right {
+    display: flex;
+
+    justify-content: flex-end;
+    align-items: center;
+
+    gap: 32px;
+
+    list-style: none;
+
+    margin: 0;
+    padding: 0;
+}
+
+.nav-right li {
+    position: relative;
+}
+
+.nav-right a {
+    color: #3b1f14;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 16px;
+    font-weight: bold;
+
+    padding: 10px 3px;
+
+    position: relative;
+
+    transition: 0.3s ease;
+}
+
+.nav-right a:hover {
+    color: #08765b;
+}
+
+
+/* Gold underline */
+
+.nav-right a::after {
+    content: "";
+
+    position: absolute;
+
+    left: 50%;
+    bottom: 0;
+
+    width: 0;
+    height: 2px;
+
+    background: #c6952e;
+
+    transform: translateX(-50%);
+
+    transition: 0.3s ease;
+}
+
+.nav-right a:hover::after {
+    width: 100%;
+}
+
+
+/* =========================
+   DECORATIVE GOLD LINE
+========================= */
+
+.navbar::after {
+    content: "";
+
+    position: absolute;
+
+    bottom: -3px;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    width: 100px;
+    height: 3px;
+
+    background: #c6952e;
+
+    border-radius: 10px;
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 1000px) {
+
+    .navbar {
+        padding: 0 30px;
+    }
+
+    .nav-center {
+        gap: 25px;
+    }
+
+    .nav-right {
+        gap: 20px;
+    }
+
+    .hotel-logo span {
+        font-size: 25px;
+    }
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 768px) {
+
+    .navbar {
+        min-height: auto;
+
+        display: flex;
+        flex-direction: column;
+
+        justify-content: center;
+        align-items: center;
+
+        gap: 15px;
+
+        padding: 20px 15px;
+    }
+
+    .hotel-logo {
+        text-align: center;
+        align-items: center;
+    }
+
+    .hotel-logo span {
+        font-size: 25px;
+        letter-spacing: 3px;
+    }
+
+    .hotel-logo small {
+        font-size: 8px;
+    }
+
+    .nav-center,
+    .nav-right {
+        gap: 20px;
+
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .nav-center a,
+    .nav-right a {
+        font-size: 14px;
+    }
+
+    .navbar::after {
+        width: 65px;
+    }
+}
+
+
+/* =========================
+   SMALL MOBILE
+========================= */
+
+@media (max-width: 450px) {
+
+    .hotel-logo span {
+        font-size: 21px;
+    }
+
+    .nav-center,
+    .nav-right {
+        gap: 14px;
+    }
+
+    .nav-center a,
+    .nav-right a {
+        font-size: 13px;
+    }
+}
+
+/* =========================================================
+   7. HERO SECTION
+========================================================= */
+
+.hero {
+    min-height: calc(100vh - 105px);
+
+    width: 100%;
+
+    position: relative;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    padding: 80px 25px;
+
+    overflow: hidden;
+
+    background-color: #f5ead0;
+
+    background-image: url("background.jpg");
+
+    background-size: cover;
+
+    background-position: center center;
+
+    background-repeat: no-repeat;
+}
+
+
+/* =========================================================
+   8. HERO DARK/CREAM OVERLAY
+========================================================= */
+
+.hero::before {
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(255, 248, 226, 0.08),
+            rgba(255, 248, 226, 0.02),
+            rgba(255, 248, 226, 0.08)
+        );
+
+    pointer-events: none;
+}
+
+
+/* =========================================================
+   9. HERO CENTER CONTENT
+========================================================= */
+
+.hero-content {
+    position: relative;
+
+    z-index: 5;
+
+    width: 650px;
+
+    max-width: 92%;
+
+    padding: 58px 65px;
+
+    text-align: center;
+
+    background: rgba(255, 252, 240, 0.95);
+
+    border: 1px solid #d7b867;
+
+    box-shadow:
+        0 25px 70px rgba(60, 40, 15, 0.18);
+
+    backdrop-filter: blur(3px);
+
+    animation: heroAppear 1s ease;
+}
+
+
+/* =========================================================
+   10. HERO SMALL TITLE
+========================================================= */
+
+.welcome-small {
+    color: #08765b;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    letter-spacing: 5px;
+
+    margin-bottom: 22px;
+}
+
+
+/* =========================================================
+   11. HERO HOTEL NAME
+========================================================= */
+
+.hero h1 {
+    color: #08765b;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 68px;
+
+    font-weight: 500;
+
+    line-height: 1.05;
+
+    letter-spacing: 1px;
+
+    margin-bottom: 20px;
+
+    text-shadow:
+        1px 2px 1px rgba(60, 40, 15, 0.08);
+}
+
+
+/* =========================================================
+   12. GOLD DECORATIVE LINE
+========================================================= */
+
+.hero-line {
+    width: 90px;
+
+    height: 3px;
+
+    background: #c6952e;
+
+    margin: 0 auto 25px;
+
+    position: relative;
+}
+
+.hero-line::before,
+.hero-line::after {
+    content: "✦";
+
+    position: absolute;
+
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    color: #c6952e;
+
+    font-size: 12px;
+}
+
+.hero-line::before {
+    left: -22px;
+}
+
+.hero-line::after {
+    right: -22px;
+}
+
+
+/* =========================================================
+   13. HERO TAGLINE
+========================================================= */
+
+.hero-tagline {
+    color: #3b1f14;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 24px;
+
+    font-weight: bold;
+
+    line-height: 1.4;
+
+    margin-bottom: 15px;
+}
+
+
+/* =========================================================
+   14. HERO DESCRIPTION
+========================================================= */
+
+.hero-description {
+    max-width: 500px;
+
+    margin: 0 auto 32px;
+
+    color: #5c4b3e;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 16px;
+
+    line-height: 1.8;
+}
+
+
+/* =========================================================
+   15. HERO BUTTON CONTAINER
+========================================================= */
+
+.hero-buttons {
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 15px;
+
+    flex-wrap: wrap;
+}
+
+
+/* =========================================================
+   16. MAIN BUTTON
+========================================================= */
+
+.hero-btn {
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    min-width: 175px;
+
+    padding: 14px 25px;
+
+    background: #08765b;
+
+    border: 1px solid #08765b;
+
+    color: white;
+
+    font-size: 13px;
+
+    font-weight: bold;
+
+    letter-spacing: 1.5px;
+
+    transition:
+        background 0.3s ease,
+        color 0.3s ease,
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.hero-btn:hover {
+    background: #c6952e;
+
+    border-color: #c6952e;
+
+    color: white;
+
+    transform: translateY(-4px);
+
+    box-shadow:
+        0 8px 20px rgba(100, 70, 20, 0.2);
+}
+
+
+/* =========================================================
+   17. SECONDARY BUTTON
+========================================================= */
+
+.secondary-btn {
+    background: transparent;
+
+    color: #08765b;
+
+    border-color: #08765b;
+}
+
+.secondary-btn:hover {
+    background: #08765b;
+
+    border-color: #08765b;
+
+    color: white;
+}
+
+
+/* =========================================================
+   18. HERO ANIMATION
+========================================================= */
+
+@keyframes heroAppear {
+
+    from {
+        opacity: 0;
+
+        transform: translateY(25px);
+    }
+
+    to {
+        opacity: 1;
+
+        transform: translateY(0);
+    }
+}
+
+
+/* =========================================================
+   19. FOOTER
+========================================================= */
+
+footer {
+    width: 100%;
+
+    padding: 24px 20px;
+
+    text-align: center;
+
+    background: #173f34;
+
+    color: #eee5d5;
+
+    font-size: 13px;
+
+    letter-spacing: 0.5px;
+
+    border-top: 3px solid #c6952e;
+}
+
+footer p {
+    margin: 0;
+}
+
+
+/* =========================================================
+   20. SELECTION COLOR
+========================================================= */
+
+::selection {
+    background: #08765b;
+
+    color: white;
+}
+
+
+/* =========================================================
+   21. SCROLLBAR
+========================================================= */
+
+::-webkit-scrollbar {
+    width: 9px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f4ead5;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #08765b;
+
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #c6952e;
+}
+
+
+/* =========================================================
+   22. TABLET
+========================================================= */
+
+@media (max-width: 1000px) {
+
+    .navbar {
+        padding: 0 30px;
+    }
+
+    .nav-center {
+        gap: 25px;
+    }
+
+    .nav-right {
+        gap: 20px;
+    }
+
+    .hotel-logo span {
+        font-size: 24px;
+    }
+
+    .hero-content {
+        width: 600px;
+
+        padding: 50px 45px;
+    }
+
+    .hero h1 {
+        font-size: 58px;
+    }
+}
+
+
+/* =========================================================
+   23. MOBILE
+========================================================= */
+
+@media (max-width: 768px) {
+
+    .navbar {
+        min-height: auto;
+
+        display: flex;
+
+        flex-direction: column;
+
+        justify-content: center;
+
+        gap: 16px;
+
+        padding: 20px 15px;
+    }
+
+
+    .hotel-logo {
+        text-align: center;
+
+        align-items: center;
+    }
+
+
+    .hotel-logo span {
+        font-size: 25px;
+
+        letter-spacing: 3px;
+    }
+
+
+    .hotel-logo small {
+        font-size: 8px;
+
+        letter-spacing: 1.5px;
+    }
+
+
+    .nav-center,
+    .nav-right {
+        gap: 20px;
+
+        justify-content: center;
+
+        flex-wrap: wrap;
+    }
+
+
+    .nav-center a,
+    .nav-right a {
+        font-size: 14px;
+    }
+
+
+    .navbar::after {
+        bottom: -3px;
+
+        width: 60px;
+    }
+
+
+    .hero {
+        min-height: calc(100vh - 150px);
+
+        padding: 40px 15px;
+
+        background-position: center center;
+    }
+
+
+    .hero-content {
+        width: 100%;
+
+        max-width: 95%;
+
+        padding: 40px 22px;
+    }
+
+
+    .welcome-small {
+        font-size: 11px;
+
+        letter-spacing: 3px;
+
+        margin-bottom: 16px;
+    }
+
+
+    .hero h1 {
+        font-size: 44px;
+
+        line-height: 1.1;
+    }
+
+
+    .hero-tagline {
+        font-size: 19px;
+    }
+
+
+    .hero-description {
+        font-size: 14px;
+
+        line-height: 1.7;
+    }
+
+
+    .hero-buttons {
+        flex-direction: column;
+
+        gap: 12px;
+    }
+
+
+    .hero-btn {
+        width: 210px;
+
+        min-width: 210px;
+    }
+}
+
+
+/* =========================================================
+   24. SMALL MOBILE
+========================================================= */
+
+@media (max-width: 450px) {
+
+    .hotel-logo span {
+        font-size: 21px;
+    }
+
+
+    .nav-center,
+    .nav-right {
+        gap: 14px;
+    }
+
+
+    .nav-center a,
+    .nav-right a {
+        font-size: 13px;
+    }
+
+
+    .hero {
+        padding: 30px 10px;
+    }
+
+
+    .hero-content {
+        padding: 32px 17px;
+    }
+
+
+    .hero h1 {
+        font-size: 37px;
+    }
+
+
+    .hero-tagline {
+        font-size: 17px;
+    }
+
+
+    .hero-description {
+        font-size: 13px;
+    }
+
+
+    .hero-btn {
+        width: 190px;
+
+        min-width: 190px;
+
+        padding: 12px 18px;
+
+        font-size: 12px;
+    }
+}
+
+
+/* =========================================================
+   25. ACCESSIBILITY / REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+
+        animation-iteration-count: 1 !important;
+
+        transition-duration: 0.01ms !important;
+    }
+}
+/* =========================
+   MENU PAGE
+========================= */
+
+.menu-page {
+    min-height: calc(100vh - 105px);
+    padding: 70px 7%;
+    background: #fffaf0;
+}
+
+/* Menu Heading */
+.menu-heading {
+    text-align: center;
+    max-width: 750px;
+    margin: 0 auto 50px;
+}
+
+.menu-small-title {
+    color: #08765b;
+    font-family: Georgia, serif;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 4px;
+    margin-bottom: 12px;
+}
+
+.menu-heading h1 {
+    color: #08765b;
+    font-family: Georgia, serif;
+    font-size: 48px;
+    font-weight: 500;
+    margin-bottom: 12px;
+}
+
+.menu-heading > p:last-child {
+    color: #6b5b50;
+    font-family: Georgia, serif;
+    font-size: 17px;
+}
+
+/* Food Cards */
+.menu-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.food-card {
+    background: #fffdf7;
+    border: 1px solid #e1c77d;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(60, 40, 15, 0.12);
+    transition: 0.3s ease;
+}
+
+.food-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 18px 35px rgba(60, 40, 15, 0.18);
+}
+
+/* Food Image */
+.food-image {
+    width: 100%;
+    height: 230px;
+    overflow: hidden;
+}
+
+.food-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: 0.4s ease;
+}
+
+.food-card:hover .food-image img {
+    transform: scale(1.08);
+}
+
+/* Food Details */
+.food-details {
+    padding: 22px;
+}
+
+.food-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 10px;
+}
+
+.food-title h3 {
+    color: #3b1f14;
+    font-family: Georgia, serif;
+    font-size: 21px;
+}
+
+.food-title span {
+    color: #c6952e;
+    font-size: 19px;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+.food-details > p {
+    color: #6b5b50;
+    font-size: 15px;
+    line-height: 1.6;
+    margin-bottom: 18px;
+}
+
+/* Order Button */
+.order-btn {
+    width: 100%;
+    padding: 13px;
+    border: none;
+    background: #08765b;
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.order-btn:hover {
+    background: #c6952e;
+}
+
+/* Mobile */
+@media (max-width: 850px) {
+
+    .menu-container {
+        grid-template-columns: 1fr;
+    }
+
+    .menu-heading h1 {
+        font-size: 38px;
+    }
+
+    .menu-page {
+        padding: 55px 5%;
+    }
+
+    .food-image {
+        height: 240px;
+    }
+}
+/* =========================================================
+   ABOUT PAGE
+========================================================= */
+
+.about-page {
+    background: #fffaf0;
+    color: #3b1f14;
+}
+
+/* Heading */
+
+.about-heading {
+    text-align: center;
+    padding: 75px 20px 55px;
+    max-width: 850px;
+    margin: auto;
+}
+
+.about-small-title {
+    color: #08765b;
+    font-family: Georgia, serif;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 4px;
+    margin-bottom: 15px;
+}
+
+.about-heading h1 {
+    color: #08765b;
+    font-family: Georgia, serif;
+    font-size: 50px;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+.about-heading > p:last-child {
+    color: #6b5b50;
+    font-family: Georgia, serif;
+    font-size: 17px;
+    line-height: 1.7;
+}
+
+
+/* Story */
+
+.about-story {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 7% 90px;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 70px;
+    align-items: center;
+}
+
+.about-image {
+    height: 450px;
+    overflow: hidden;
+    border: 1px solid #d6b45c;
+    box-shadow: 0 15px 35px rgba(60, 40, 15, 0.15);
+}
+
+.about-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.about-text {
+    padding: 10px;
+}
+
+.about-label {
+    color: #c6952e;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin-bottom: 12px;
+}
+
+.about-text h2 {
+    color: #08765b;
+    font-family: Georgia, serif;
+    font-size: 38px;
+    font-weight: 500;
+    margin-bottom: 22px;
+}
+
+.about-text p:not(.about-label) {
+    color: #6b5b50;
+    font-size: 16px;
+    line-height: 1.8;
+    margin-bottom: 15px;
+}
+
+
+/* Why Section */
+
+.why-section {
+    background: #f5ead0;
+    text-align: center;
+    padding: 80px 7%;
+}
+
+.why-section h2,
+.special-section h2 {
+    color: #08765b;
+    font-family: Georgia, serif;
+    font-size: 38px;
+    font-weight: 500;
+    margin-bottom: 45px;
+}
+
+.why-container {
+    max-width: 1100px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.why-card {
+    background: #fffdf7;
+    border: 1px solid #e1c77d;
+    padding: 35px 25px;
+    box-shadow: 0 10px 25px rgba(60, 40, 15, 0.08);
+    transition: 0.3s ease;
+}
+
+.why-card:hover {
+    transform: translateY(-8px);
+}
+
+.why-icon {
+    font-size: 38px;
+    margin-bottom: 15px;
+}
+
+.why-card h3 {
+    color: #3b1f14;
+    font-family: Georgia, serif;
+    font-size: 21px;
+    margin-bottom: 12px;
+}
+
+.why-card p {
+    color: #6b5b50;
+    line-height: 1.6;
+    font-size: 15px;
+}
+
+
+/* Specialities */
+
+.special-section {
+    text-align: center;
+    padding: 85px 7%;
+    background: #fffaf0;
+}
+
+.special-container {
+    max-width: 1100px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.special-card {
+    background: #fffdf7;
+    border: 1px solid #e1c77d;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(60, 40, 15, 0.10);
+    transition: 0.3s ease;
+}
+
+.special-card:hover {
+    transform: translateY(-8px);
+}
+
+.special-card img {
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+    display: block;
+}
+
+.special-card h3 {
+    color: #3b1f14;
+    font-family: Georgia, serif;
+    font-size: 21px;
+    padding: 20px;
+}
+
+
+/* CTA */
+
+.about-cta {
+    text-align: center;
+    padding: 80px 20px;
+    background: #08765b;
+}
+
+.about-cta h2 {
+    color: white;
+    font-family: Georgia, serif;
+    font-size: 36px;
+    font-weight: 500;
+    margin-bottom: 12px;
+}
+
+.about-cta p {
+    color: #f5ead0;
+    font-size: 16px;
+    margin-bottom: 25px;
+}
+
+.about-btn {
+    display: inline-block;
+    padding: 14px 30px;
+    background: #c6952e;
+    color: white;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    transition: 0.3s ease;
+}
+
+.about-btn:hover {
+    background: white;
+    color: #08765b;
+}
+
+
+/* About Mobile */
+
+@media (max-width: 800px) {
+
+    .about-heading {
+        padding: 55px 20px 40px;
+    }
+
+    .about-heading h1 {
+        font-size: 38px;
+    }
+
+    .about-story {
+        grid-template-columns: 1fr;
+        gap: 35px;
+        padding: 10px 5% 60px;
+    }
+
+    .about-image {
+        height: 300px;
+    }
+
+    .about-text h2 {
+        font-size: 32px;
+    }
+
+    .why-container,
+    .special-container {
+        grid-template-columns: 1fr;
+    }
+
+    .why-section h2,
+    .special-section h2 {
+        font-size: 32px;
+    }
+
+    .about-cta h2 {
+        font-size: 28px;
+    }
+}
+/* =========================================================
+   PREMIUM CONTACT PAGE
+========================================================= */
+
+.contact-page {
+    background: #fffaf0;
+    padding: 75px 7% 0;
+}
+
+/* Heading */
+
+.contact-heading {
+    text-align: center;
+    max-width: 750px;
+    margin: 0 auto 55px;
+}
+
+.contact-small-title {
+    color: #08765b;
+    font-family: Georgia, serif;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 4px;
+    margin-bottom: 15px;
+}
+
+.contact-heading h1 {
+    color: #08765b;
+    font-family: Georgia, serif;
+    font-size: 50px;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+.contact-heading > p:last-child {
+    color: #6b5b50;
+    font-family: Georgia, serif;
+    font-size: 17px;
+    line-height: 1.7;
+}
+
+
+/* Contact Cards */
+
+.contact-container {
+    max-width: 1100px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+}
+
+.contact-card {
+    background: #fffdf7;
+    border: 1px solid #e1c77d;
+
+    padding: 35px 25px;
+    text-align: center;
+
+    box-shadow: 0 10px 25px rgba(60, 40, 15, 0.10);
+
+    transition: 0.3s ease;
+}
+
+.contact-card:hover {
+    transform: translateY(-8px);
+
+    box-shadow: 0 18px 35px rgba(60, 40, 15, 0.16);
+}
+
+.contact-icon {
+    font-size: 35px;
+    margin-bottom: 15px;
+}
+
+.contact-card h3 {
+    color: #3b1f14;
+    font-family: Georgia, serif;
+    font-size: 22px;
+    margin-bottom: 12px;
+}
+
+.contact-card p {
+    min-height: 48px;
+
+    color: #6b5b50;
+    font-size: 15px;
+    line-height: 1.6;
+
+    margin-bottom: 8px;
+}
+
+
+/* Buttons */
+
+.contact-btn {
+    display: inline-block;
+
+    margin-top: 12px;
+
+    padding: 11px 22px;
+
+    background: #08765b;
+    color: white;
+
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 1px;
+
+    transition: 0.3s ease;
+}
+
+.contact-btn:hover {
+    background: #c6952e;
+    transform: translateY(-2px);
+}
+
+
+/* Bottom CTA */
+
+.contact-cta {
+    margin-top: 80px;
+
+    padding: 75px 20px;
+
+    text-align: center;
+
+    background: #08765b;
+}
+
+.contact-cta > p:first-child {
+    color: #c6952e;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 4px;
+    margin-bottom: 15px;
+}
+
+.contact-cta h2 {
+    color: white;
+    font-family: Georgia, serif;
+    font-size: 40px;
+    font-weight: 500;
+    margin-bottom: 12px;
+}
+
+.contact-cta > p:nth-child(3) {
+    color: #f5ead0;
+    font-size: 16px;
+    margin-bottom: 25px;
+}
+
+.contact-map-btn {
+    display: inline-block;
+
+    padding: 14px 30px;
+
+    background: #c6952e;
+    color: white;
+
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 1px;
+
+    transition: 0.3s ease;
+}
+
+.contact-map-btn:hover {
+    background: white;
+    color: #08765b;
+}
+
+
+/* Mobile */
+
+@media (max-width: 850px) {
+
+    .contact-page {
+        padding: 55px 5% 0;
+    }
+
+    .contact-heading h1 {
+        font-size: 38px;
+    }
+
+    .contact-container {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-cta {
+        margin-top: 60px;
+        padding: 60px 20px;
+    }
+
+    .contact-cta h2 {
+        font-size: 30px;
+    }
+}
