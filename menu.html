@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Veeranar Hotel - Menu</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ================= HEADER ================= -->
+
+    <header>
+        <nav class="navbar">
+
+            <a href="index.html" class="hotel-logo">
+                <span>VEERANAR</span>
+                <small>AUTHENTIC SOUTH INDIAN CUISINE</small>
+            </a>
+
+            <ul class="nav-center">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="menu.html">Menu</a></li>
+            </ul>
+
+            <ul class="nav-right">
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+
+                <li>
+                    <a
+                        href="#"
+                        class="cart-link"
+                        onclick="openCart(); return false;"
+                    >
+                        Order
+                        <span id="cart-count">0</span>
+                    </a>
+                </li>
+            </ul>
+
+        </nav>
+    </header>
+
+
+    <!-- ================= MENU SECTION ================= -->
+
+    <main class="menu-page">
+
+        <section class="menu-heading">
+
+            <p class="menu-small-title">
+                OUR SPECIAL MENU
+            </p>
+
+            <h1>Our Delicious Food</h1>
+
+            <p>
+                Authentic South Indian flavours,
+                freshly prepared with love.
+            </p>
+
+        </section>
+
+
+        <section class="menu-container">
+
+
+            <!-- CHICKEN BIRIYANI -->
+
+            <article
+                class="food-card"
+                data-name="Chicken Biriyani"
+                data-price="150"
+            >
+
+                <div class="food-image">
+                    <img
+                        src="image.biriyani.jpg"
+                        alt="Chicken Biriyani"
+                    >
+                </div>
+
+                <div class="food-details">
+
+                    <div class="food-title">
+                        <h3>Chicken Biriyani</h3>
+                        <span>₹150</span>
+                    </div>
+
+                    <p>
+                        Authentic South Indian style biriyani
+                        with rich spices and tender chicken.
+                    </p>
+
+                    <div class="quantity-box">
+
+                        <button
+                            type="button"
+                            onclick="changeQuantity(this, -1)"
+                            aria-label="Decrease quantity"
+                        >−</button>
+
+                        <span class="quantity">1</span>
+
+                        <button
+                            type="button"
+                            onclick="changeQuantity(this, 1)"
+                            aria-label="Increase quantity"
+                        >+</button>
+
+                    </div>
+
+                    <button
+                        type="button"
+                        class="order-btn"
+                        onclick="addToCart(this)"
+                    >
+                        Add to Order
+                    </button>
+
+                </div>
+            </article>
+
+
+            <!-- MADURAI PAROTTA -->
+
+            <article
+                class="food-card"
+                data-name="Madurai Parotta"
+                data-price="20"
+            >
+
+                <div class="food-image">
+                    <img
+                        src="parrato.jpg"
+                        alt="Madurai Parotta"
+                    >
+                </div>
+
+                <div class="food-details">
+
+                    <div class="food-title">
+                        <h3>Madurai Parotta</h3>
+                        <span>₹20</span>
+                    </div>
+
+                    <p>
+                        Soft and flaky Madurai style parotta
+                        served hot and fresh.
+                    </p>
+
+                    <div class="quantity-box">
+
+                        <button
+                            type="button"
+                            onclick="changeQuantity(this, -1)"
+                            aria-label="Decrease quantity"
+                        >−</button>
+
+                        <span class="quantity">1</span>
+
+                        <button
+                            type="button"
+                            onclick="changeQuantity(this, 1)"
+                            aria-label="Increase quantity"
+                        >+</button>
+
+                    </div>
+
+                    <button
+                        type="button"
+                        class="order-btn"
+                        onclick="addToCart(this)"
+                    >
+                        Add to Order
+                    </button>
+
+                </div>
+            </article>
+
+
+            <!-- CRISPY DOSAI -->
+
+            <article
+                class="food-card"
+                data-name="Crispy Dosai"
+                data-price="40"
+            >
+
+                <div class="food-image">
+                    <img
+                        src="dosai.jpg"
+                        alt="Crispy Dosai"
+                    >
+                </div>
+
+                <div class="food-details">
+
+                    <div class="food-title">
+                        <h3>Crispy Dosai</h3>
+                        <span>₹40</span>
+                    </div>
+
+                    <p>
+                        Crispy golden dosai served with
+                        delicious chutney and sambar.
+                    </p>
+
+                    <div class="quantity-box">
+
+                        <button
+                            type="button"
+                            onclick="changeQuantity(this, -1)"
+                            aria-label="Decrease quantity"
+                        >−</button>
+
+                        <span class="quantity">1</span>
+
+                        <button
+                            type="button"
+                            onclick="changeQuantity(this, 1)"
+                            aria-label="Increase quantity"
+                        >+</button>
+
+                    </div>
+
+                    <button
+                        type="button"
+                        class="order-btn"
+                        onclick="addToCart(this)"
+                    >
+                        Add to Order
+                    </button>
+
+                </div>
+            </article>
+
+
+            <!-- CHICKEN 65 -->
+
+            <article
+                class="food-card"
+                data-name="Chicken 65"
+                data-price="120"
+            >
+
+                <div class="food-image">
+                    <img
+                        src="chicken65.jpg"
+                        alt="Chicken 65"
+                    >
+                </div>
+
+                <div class="food-details">
+
+                    <div class="food-title">
+                        <h3>Chicken 65</h3>
+                        <span>₹120</span>
+                    </div>
+
+                    <p>
+                        Crispy, spicy and juicy chicken
+                        prepared with our special masala.
+                    </p>
+
+                    <div class="quantity-box">
+
+                        <button
+                            type="button"
+                            onclick="changeQuantity(this, -1)"
+                            aria-label="Decrease quantity"
+                        >−</button>
+
+                        <span class="quantity">1</span>
+
+                        <button
+                            type="button"
+                            onclick="changeQuantity(this, 1)"
+                            aria-label="Increase quantity"
+                        >+</button>
+
+                    </div>
+
+                    <button
+                        type="button"
+                        class="order-btn"
+                        onclick="addToCart(this)"
+                    >
+                        Add to Order
+                    </button>
+
+                </div>
+            </article>
+
+
+            <!-- CHICKEN GRAVY -->
+
+            <article
+                class="food-card"
+                data-name="Chicken Gravy"
+                data-price="130"
+            >
+
+                <div class="food-image">
+                    <img
+                        src="chickengravy.jpg"
+                        alt="Chicken Gravy"
+                    >
+                </div>
+
+                <div class="food-details">
+
+                    <div class="food-title">
+                        <h3>Chicken Gravy</h3>
+                        <span>₹130</span>
+                    </div>
+
+                    <p>
+                        Traditional South Indian chicken gravy
+                        with aromatic spices.
+                    </p>
+
+                    <div class="quantity-box">
+
+                        <button
+                            type="button"
+                            onclick="changeQuantity(this, -1)"
+                            aria-label="Decrease quantity"
+                        >−</button>
+
+                        <span class="quantity">1</span>
+
+                        <button
+                            type="button"
+                            onclick="changeQuantity(this, 1)"
+                            aria-label="Increase quantity"
+                        >+</button>
+
+                    </div>
+
+                    <button
+                        type="button"
+                        class="order-btn"
+                        onclick="addToCart(this)"
+                    >
+                        Add to Order
+                    </button>
+
+                </div>
+            </article>
+
+
+            <!-- SOFT IDLI -->
+
+            <article
+                class="food-card"
+                data-name="Soft Idli"
+                data-price="30"
+            >
+
+                <div class="food-image">
+                    <img
+                        src="idly.jpg"
+                        alt="Soft Idli"
+                    >
+                </div>
+
+                <div class="food-details">
+
+                    <div class="food-title">
+                        <h3>Soft Idli</h3>
+                        <span>₹30</span>
+                    </div>
+
+                    <p>
+                        Soft and fluffy idlis served with
+                        fresh chutney and sambar.
+                    </p>
+
+                    <div class="quantity-box">
+
+                        <button
+                            type="button"
+                            onclick="changeQuantity(this, -1)"
+                            aria-label="Decrease quantity"
+                        >−</button>
+
+                        <span class="quantity">1</span>
+
+                        <button
+                            type="button"
+                            onclick="changeQuantity(this, 1)"
+                            aria-label="Increase quantity"
+                        >+</button>
+
+                    </div>
+
+                    <button
+                        type="button"
+                        class="order-btn"
+                        onclick="addToCart(this)"
+                    >
+                        Add to Order
+                    </button>
+
+                </div>
+            </article>
+
+        </section>
+
+    </main>
+
+
+    <!-- ================= CART OVERLAY ================= -->
+
+    <div
+        id="cart-overlay"
+        class="cart-overlay"
+        onclick="closeCart()"
+    ></div>
+
+
+    <!-- ================= CART DRAWER ================= -->
+
+    <aside
+        id="cart-drawer"
+        class="cart-drawer"
+        aria-label="Your order"
+    >
+
+        <!-- CART HEADER -->
+
+        <div class="cart-header">
+
+            <h2 id="cart-panel-title">Your Order</h2>
+
+            <button
+                type="button"
+                class="cart-close"
+                aria-label="Close cart"
+                onclick="closeCart()"
+            >×</button>
+
+        </div>
+
+
+        <!-- ================= STEP 1: ORDER ================= -->
+
+        <section id="order-step" class="cart-step">
+
+            <div id="cart-items" class="cart-items">
+
+                <p class="empty-cart">
+                    Your order is empty.
+                </p>
+
+            </div>
+
+            <div class="cart-step-footer">
+
+                <div class="cart-total">
+
+                    <span>Total</span>
+
+                    <strong id="cart-total">₹0</strong>
+
+                </div>
+
+                <button
+                    type="button"
+                    class="whatsapp-order-btn"
+                    onclick="goToCheckout()"
+                >
+                    CONTINUE TO CHECKOUT
+                </button>
+
+                <button
+                    type="button"
+                    class="continue-shopping-btn"
+                    onclick="closeCart()"
+                >
+                    CONTINUE ADDING ITEMS
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= STEP 2: CHECKOUT ================= -->
+
+        <section
+            id="checkout-step"
+            class="cart-step"
+            hidden
+        >
+
+            <div class="checkout-content">
+
+                <button
+                    type="button"
+                    class="back-to-order-btn"
+                    onclick="backToOrder()"
+                >
+                    ← Back to Your Order
+                </button>
+
+                <h3 class="checkout-title">
+                    Customer Details
+                </h3>
+
+
+                <label for="customer-name">
+                    Your Name
+                </label>
+
+                <input
+                    type="text"
+                    id="customer-name"
+                    placeholder="Enter your name"
+                    autocomplete="name"
+                >
+
+
+                <label for="customer-phone">
+                    Phone Number
+                </label>
+
+                <input
+                    type="tel"
+                    id="customer-phone"
+                    placeholder="Enter phone number"
+                    autocomplete="tel"
+                    inputmode="tel"
+                >
+
+
+                <label for="order-type">
+                    Order Type
+                </label>
+
+                <select
+                    id="order-type"
+                    onchange="toggleAddressField()"
+                >
+
+                    <option value="Pickup">Pickup</option>
+                    <option value="Delivery">Delivery</option>
+
+                </select>
+
+
+                <div id="address-field" hidden>
+
+                    <label for="customer-address">
+                        Delivery Address
+                    </label>
+
+                    <textarea
+                        id="customer-address"
+                        placeholder="Enter delivery address"
+                        rows="3"
+                        autocomplete="street-address"
+                    ></textarea>
+
+                </div>
+
+            </div>
+
+
+            <div class="cart-step-footer checkout-footer">
+
+                <div class="cart-total">
+
+                    <span>Total</span>
+
+                    <strong id="checkout-total">₹0</strong>
+
+                </div>
+
+                <button
+                    type="button"
+                    class="whatsapp-order-btn"
+                    onclick="orderCartOnWhatsApp()"
+                >
+                    ORDER ON WHATSAPP
+                </button>
+
+            </div>
+
+        </section>
+
+    </aside>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+        <p>
+            © 2026 Veeranar Hotel. All Rights Reserved.
+        </p>
+    </footer>
+
+
+    <!-- ================= JAVASCRIPT ================= -->
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
